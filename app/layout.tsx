@@ -1,9 +1,7 @@
+import Logo from "@/app/_components/Logo"
+import { Navigation } from "@/app/_components/Navigation"
+import "@/app/_styles/globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import Logo from "./components/Logo"
-import { Navigation } from "./components/Navigation"
-
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
 	title: "Oasis",
@@ -17,7 +15,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className="bg-primary-950 text-primary-100 min-h-screen">
 				<header>
 					<Logo />
 				</header>
