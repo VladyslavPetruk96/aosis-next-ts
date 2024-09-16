@@ -1,17 +1,20 @@
-import Logo from "@/app/_components/Logo"
-import { Navigation } from "@/app/_components/Navigation"
-import "@/app/_styles/globals.css"
-import type { Metadata } from "next"
+import Logo from "@/app/_components/Logo";
+import { Navigation } from "@/app/_components/Navigation";
+import "@/app/_styles/globals.css";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Oasis",
+	title: {
+		template: "%s | Oasis",
+		default: "Welcome | Oasis",
+	},
 	description: "Booking app",
-}
+};
 
 export default function RootLayout({
 	children,
 }: Readonly<{
-	children: React.ReactNode
+	children: React.ReactNode;
 }>) {
 	return (
 		<html lang="en">
@@ -24,5 +27,5 @@ export default function RootLayout({
 				<footer>Copyright by Oasis</footer>
 			</body>
 		</html>
-	)
+	);
 }
